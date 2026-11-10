@@ -4,30 +4,30 @@
 # the tap by hand.
 # No `service do` block: `masil daemon install` owns autostart registration.
 class Masil < Formula
-  desc "터미널 채팅 + SNS"
+  desc "Terminal chat + social feed"
   homepage "https://github.com/patrache/masil"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/patrache/masil/releases/download/v0.1.2/masil_darwin_arm64.tar.gz"
-      sha256 "c428084343ddb37e613866e73eb62202e474179d2eca4822fd74fa6fb9fa90e1"
+      url "https://github.com/patrache/masil/releases/download/v0.1.3/masil_darwin_arm64.tar.gz"
+      sha256 "433cfe83a49e72fa61123ae8452dfdbe0369ff39a533ad26fe2ed0080e6f1785"
     end
     on_intel do
-      url "https://github.com/patrache/masil/releases/download/v0.1.2/masil_darwin_amd64.tar.gz"
-      sha256 "96bff10ee868cb49f37df1a00bc4e4e89622f7d2316c711a7ae6113ac261f586"
+      url "https://github.com/patrache/masil/releases/download/v0.1.3/masil_darwin_amd64.tar.gz"
+      sha256 "4f2bba000e44e76dc546e56c60e1624a010efc70bba049029d1e4bfea2d0e46c"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/patrache/masil/releases/download/v0.1.2/masil_linux_arm64.tar.gz"
-      sha256 "f219c20584b3505d7d95d91daa9e213c00fdeb2d5e28bd35b827925cdd5921a3"
+      url "https://github.com/patrache/masil/releases/download/v0.1.3/masil_linux_arm64.tar.gz"
+      sha256 "0daa1564ee67fe5a19d1624eb806892f6ec3e26caff45060c83a6a88bcaae100"
     end
     on_intel do
-      url "https://github.com/patrache/masil/releases/download/v0.1.2/masil_linux_amd64.tar.gz"
-      sha256 "bfd9d2a8f6ea5ca1ebb5d871a9348cc5dfd00e55f0674f8355db8517f300882a"
+      url "https://github.com/patrache/masil/releases/download/v0.1.3/masil_linux_amd64.tar.gz"
+      sha256 "9d5c96812ec2bb210f9e2b8944daf144355db874f9f56be21f438f82eea8abfa"
     end
   end
 
@@ -37,9 +37,14 @@ class Masil < Formula
 
   def caveats
     <<~EOS
+      Start the notification daemon at login: masil daemon install
       알림 데몬 자동 시작: masil daemon install
+      After brew upgrade a registered daemon restarts itself on the new version — check with 'masil daemon status', and if it has not changed run 'masil daemon install' again.
       brew upgrade 뒤 등록된 데몬은 새 버전으로 스스로 다시 뜹니다 — 'masil daemon status' 로 확인하고, 안 바뀌었으면 'masil daemon install' 을 다시 실행하세요.
+      Before uninstalling, run 'masil daemon uninstall' first.
       제거 전에 'masil daemon uninstall' 을 먼저 실행하세요.
+      To use the lazygit tool: brew install lazygit
+      lazygit 도구를 쓰려면: brew install lazygit
     EOS
   end
 

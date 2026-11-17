@@ -6,28 +6,28 @@
 class Masil < Formula
   desc "Terminal chat + social feed"
   homepage "https://github.com/patrache/masil"
-  version "0.1.3-4"
+  version "0.1.3-5"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/patrache/masil/releases/download/v0.1.3-4/masil_darwin_arm64.tar.gz"
-      sha256 "b25fd124f617cb8c1998236f6988ec9d530d60c1dd69cbc7a8b1aa2c546450ec"
+      url "https://github.com/patrache/masil/releases/download/v0.1.3-5/masil_darwin_arm64.tar.gz"
+      sha256 "38afa295b8dbe56af39227fef65b64969a931fa2498b654e64ede7de5eb9f3e6"
     end
     on_intel do
-      url "https://github.com/patrache/masil/releases/download/v0.1.3-4/masil_darwin_amd64.tar.gz"
-      sha256 "a7d4017717c5d3278156bd47042e7e2164e75bca7445041fe89ef067fd1477c5"
+      url "https://github.com/patrache/masil/releases/download/v0.1.3-5/masil_darwin_amd64.tar.gz"
+      sha256 "e1957cad0248c1d5f80bf12c593dbf7536f9e9c8fc3caa19a30ea81b617af285"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/patrache/masil/releases/download/v0.1.3-4/masil_linux_arm64.tar.gz"
-      sha256 "10952a3b6288dd2843f26de5755aaa2096c13ff0beb58e9766881be7244226ba"
+      url "https://github.com/patrache/masil/releases/download/v0.1.3-5/masil_linux_arm64.tar.gz"
+      sha256 "7f64c3387e5638b557633801d76970d2a38a718035d350dafba75db2edd57f2e"
     end
     on_intel do
-      url "https://github.com/patrache/masil/releases/download/v0.1.3-4/masil_linux_amd64.tar.gz"
-      sha256 "ecbc626ebeecdfa9e06ba977c32423bd03c4bcf4280fc4bafb080b0db4dacdf9"
+      url "https://github.com/patrache/masil/releases/download/v0.1.3-5/masil_linux_amd64.tar.gz"
+      sha256 "c620c9b00ad92e7ffd543eb1547bd48e5f599e80e4af3889f65844b8fd398fe3"
     end
   end
 
